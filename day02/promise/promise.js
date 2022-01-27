@@ -1,4 +1,4 @@
-//  ===  Promise === //
+//  =========  Promise ========= //
 
 // Exercise 1
 function promiseFunction(a, b) {
@@ -105,4 +105,22 @@ function sumAsync(x, y) {
 // let's use the function now
 sumAsync(5, 7).then((result) => {
   console.log("5. The result of the addition is:", result);
+});
+
+// Example
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function sumAsync(x, y) {
+  return new Promise((resolve, reject) => {
+    sleep(500).then(() => {
+      resolve(x + y);
+    });
+  });
+}
+
+// let's use the function now
+sumAsync(5, 7).then((result) => {
+  console.log("The result of the addition is:", result);
 });
