@@ -35,20 +35,21 @@ printName.bind(person)(); //executes the function returned by bind
 
 // Example 2
 
-let drink = "wine";
+let drink1 = "wine";
 
-let foo = {
-  drink: "beer",
+let foo1 = {
+  drink1: "beer",
   getDrink: function () {
-    return drink;
+    return drink1;
   },
 };
+console.log(foo1.getDrink()); // wine
 
-let drink = "wine"; //  we first create a global variable named “drink”, and set it equal to “wine”
-var foo = {
-  drink: "beer",
+let drink2 = "wine"; //  we first create a global variable named “drink”, and set it equal to “wine”
+var foo2 = {
+  drink2: "beer",
   getDrink: function () {
-    return drink;
+    return drink2;
   },
 };
 
@@ -64,58 +65,120 @@ var foo = {
 // The next level of the scope chain is the global object, which contains a variable named “drink”,
 // so the value of that variable (“wine”), is returned.
 
-console.log(foo.getDrink()); // wine
+console.log(foo2.getDrink()); // wine
 
 // Example 3
-var drink = "wine";
+var drink3 = "wine";
 
-var foo = {
-  drink: "beer",
+var foo3 = {
+  drink3: "beer",
   getDrink: function () {
-    return this.drink; // 'this' refers to the object "foo"
+    return this.drink3; // 'this' refers to the object "foo"
   },
 };
 // In Example # 2, the only change we have made is that in the anonymous function that is assigned to “getDrink”,
 // we return “this.drink” instead of “drink”
-console.log(foo.getDrink()); // beer
+console.log(foo3.getDrink()); // beer
 
 // This is an important detail. When a function executes in the context of an object , the keyword “this” refers to that object.
 // You can access any of the properties of the object by using the “this” keyword,
 
 // Example 4
 //  Dot Notation
-var drink = "wine";
+var drink4 = "wine";
 
-var foo = {};
+var foo4 = {};
 
-foo.drink = "beer";
+foo4.drink4 = "beer";
 
-foo.getDrink = function () {
-  return this.drink; // 'this' refers to the object "foo"
+foo4.getDrink = function () {
+  return this.drink4; // 'this' refers to the object "foo"
 };
 
-console.log(foo.getDrink());
+console.log(foo4.getDrink());
 
 // Example 5
 
-var drink = "wine";
+var drink5 = "wine";
 
-var foo = {};
+var foo5 = {};
 
-foo.drink = "beer";
+foo5.drink5 = "beer";
 
-foo.getDrink = function () {
-  return this.drink; // 'this' refers to the object "foo"
+foo5.getDrink = function () {
+  return this.drink5; // 'this' refers to the object "foo"
 };
 
-foo.under21 = {};
+foo5.under21 = {};
 
-foo.under21.drink = "soda";
+foo5.under21.drink5 = "soda";
 
-foo.under21.getDrink = function () {
-  return this.drink; // 'this' refers to the object "foo.under21"
+foo5.under21.getDrink = function () {
+  return this.drink5; // 'this' refers to the object "foo5.under21"
 };
 
-console.log(foo.getDrink()); // beer
+console.log(foo5.getDrink()); // beer
 
-console.log(foo.under21.getDrink()); // soda
+console.log(foo5.under21.getDrink()); // soda
+
+// Example 6
+
+drink6 = "wine";
+
+let foo6 = {};
+
+foo6.drink6 = "beer";
+
+foo6.getDrink = function () {
+  return this.drink6; // 'this' refers to the object "foo6"
+};
+
+foo6.under21 = {};
+
+foo6.under21.drink6 = "soda";
+
+foo6.under21.getDrink = function () {
+  return foo6.getDrink.call(); // execute foo6.getDrink6()
+};
+
+console.log(foo6.getDrink()); // beer
+
+console.log(foo6.under21.getDrink()); // wine
+
+// This is because we changed the inner-workings of that function.
+// Instead of simply returning “this.drink”, we use the JavaScript “.call()” method,
+// which allows you to execute any function in the context of another object.
+// When you do not specify the context in which that function is to be “called”,
+// it executes in the context of the global object. In the global context,
+// there is a variable named “drink” and it is equal to “wine”, so “wine” is returned.
+
+// Example 7
+
+drink7 = "wine";
+
+var foo7 = {};
+
+foo7.drink7 = "beer";
+
+foo7.getDrink = function () {
+  return this.drink7; // 'this' refers to the object "foo7"
+};
+
+foo7.under21 = {};
+
+foo7.under21.drink7 = "soda";
+
+foo7.under21.getDrink = function () {
+  return foo7.getDrink.call(this); // execute foo7.getDrink()
+};
+
+console.log(foo7.getDrink()); // beer
+
+console.log(foo7.under21.getDrink()); // soda
+
+// is returned because when we used the JavaScript “.call()” method, we specified the context in which
+// the function is to execute. In this case, the context we specify is “this”.
+// “this” refers to the context of “foo.under21”, and “foo.under21” has a property named “drink”, so the value “soda” is returned.
+
+// From this link: https://javascript.info/
+// See more here: https://www.learn-js.org/

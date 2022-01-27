@@ -124,3 +124,6 @@ function sumAsync(x, y) {
 sumAsync(5, 7).then((result) => {
   console.log("The result of the addition is:", result);
 });
+
+// example from this link: https://javascript.info/prototype-inheritance
+// See more here: https://www.learn-js.org/en/Destructuring
