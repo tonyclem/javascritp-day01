@@ -75,6 +75,7 @@ console.log(nameIS("Clement"));
 let myProfession = function (params) {
   return "Hello " + params;
 };
+
 console.log("web Developer");
 
 // Callback
