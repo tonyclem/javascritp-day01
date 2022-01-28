@@ -23,6 +23,16 @@ setTimeout(function () {
   console.log("What do you believe in ?");
 }, 9000);
 
+// Anonymous function
+let sum1 = function (a, b) {
+  return a + b;
+};
+
+let sum = (function (a, b) {
+  return a + b;
+})(10, 20);
+console.log(sum);
+
 // Arrow Functions
 const welcome = (greet) => {
   return "Good day Mr " + greet;
