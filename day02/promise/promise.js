@@ -107,7 +107,7 @@ sumAsync(5, 7).then((result) => {
   console.log("5. The result of the addition is:", result);
 });
 
-// Example
+// Example 5
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -127,3 +127,117 @@ sumAsync(5, 7).then((result) => {
 
 // example from this link: https://javascript.info/prototype-inheritance
 // See more here: https://www.learn-js.org/en/Destructuring
+
+// Example 6 From freecodeCamp
+// JS Nuggets: Promises
+
+// Basic usage
+var p = new Promise(function (resolve, reject) {
+  // Do an async task async task and then...
+
+  if (good_condition) {
+    resolve("Success!");
+  } else {
+    reject("Failure!");
+  }
+});
+
+p.then(function () {
+  /* do something with the result */
+}).catch(function () {
+  /* error */
+});
+
+// Complete example
+
+var promiseCount = 0;
+
+function testPromise() {
+  var thisPromiseCount = ++promiseCount;
+  console.log(thisPromiseCount + ": Started - Sync code started");
+
+  var p1 = new Promise(function (resolve, reject) {
+    console.log(thisPromiseCount + ": Promise started - Async code started");
+    // This is only an example to create asynchronism
+    window.setTimeout(function () {
+      resolve(thisPromiseCount);
+    }, Math.random() * 2000 + 1000);
+  });
+
+  p1.then(function (val) {
+    console.log(val + ": Promise fulfilled - Async code terminated");
+  }).catch(function (reason) {
+    console.log("Handle rejected promise (" + reason + ") here.");
+  });
+
+  console.log(thisPromiseCount + ": Promise made - Sync code terminated");
+}
+
+testPromise();
+testPromise();
+testPromise();
+
+// Example 7 from here: https://davidwalsh.name/promises
+function get(url) {
+  // Return a new promise.
+  return new Promise(function (resolve, reject) {
+    // Do the usual XHR stuff
+    var req = new XMLHttpRequest();
+    req.open("GET", url);
+
+    req.onload = function () {
+      // This is called even on 404 etc
+      // so check the status
+      if (req.status == 200) {
+        // Resolve the promise with the response text
+        resolve(req.response);
+      } else {
+        // Otherwise reject with the status text
+        // which will hopefully be a meaningful error
+        reject(Error(req.statusText));
+      }
+    };
+
+    // Handle network errors
+    req.onerror = function () {
+      reject(Error("Network Error"));
+    };
+
+    // Make the request
+    req.send();
+  });
+}
+
+// Use it!
+get("story.json").then(
+  function (response) {
+    console.log("Success!", response);
+  },
+  function (error) {
+    console.error("Failed!", error);
+  }
+);
+
+// Example 8
+// he new Promise() constructor should only be used for legacy async tasks, like usage of setTimeout or XMLHttpRequest.
+// A new Promise is created with the new keyword and the promise provides resolve and reject functions to the provided callback:
+
+// var p = new Promise(function(resolve, reject) {
+
+// Do an async task async task and then...
+
+// 	if(/* good condition */) {
+// 		resolve('Success!');
+// 	}
+// 	else {
+// 		reject('Failure!');
+// 	}
+// });
+
+// p.then(function(result) {
+// 	/* do something with the result */
+// }).catch(function() {
+// 	/* error :( */
+// }).finally(function() {
+//    /* executes regardless or success for failure */
+// });

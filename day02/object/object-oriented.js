@@ -20,17 +20,17 @@ console.log(myFullName.fullName());
 let student = {
   first: "Clement",
   last: "Sunday",
-  aga: "27",
-  hight: 180,
+  age: "27",
+  height: 180,
   studentInfo: function () {
-    return this.first + "\n" + this.aga + "\n" + this.last;
+    return this.first + "\n" + this.age + "\n" + this.last;
   },
 };
 // console.log(student.last )
 student.first = "Anthony"; // change value
 // console.log(student.first)
-student.aga++;
-console.log(student.aga);
+student.age++;
+console.log(student.age);
 
 console.log(student.studentInfo());
 

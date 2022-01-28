@@ -47,7 +47,7 @@ let three = numbers[1];
 let [twoss, threess] = numbers;
 
 // We can give them other names too
-let [twos: positionZero, threes: positionOne] = numbers;
+// let [twos: positionZero, threes: positionOne] = numbers;
 
 console.log(positionZero); // prints '2'
 console.log(positionOne); // prints '3'
@@ -77,3 +77,35 @@ let getHeadAndBody = ({ head, body }) => {
 // it's better to use the old way in order to not incurring in head / body is undefined errors.
 // You can avoid that type of errors while using ES6 Destructuring giving default parameters to the function,
 //  so you can be sure that properties will exist, not being obliged to rely on the parameters received.
+
+// Example 4
+// I'm not sure if head and body will be present in some cases...
+// Now we are sure that head or body will be equal to '' if the real parameter doesn't have that properties inside
+function getHeadAndBody({ head = "", body = "" }) {
+  return { head, body };
+}
+
+// Example 5
+// Deep destructuring
+let computer = {
+  processor: {
+    transistor: {
+      silicon: {
+        thickness: "9nm",
+      },
+    },
+  },
+};
+
+let {
+  processor: {
+    transistor: {
+      silicon: { thickness },
+    },
+  },
+} = computer;
+
+// Making it cleaner
+let { thickness: inteli9Thickness } = computer.processor.transistor.silicon;
+
+console.log(inteli9Thickness); // prints '9nm'
