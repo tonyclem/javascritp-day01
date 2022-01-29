@@ -1,4 +1,6 @@
 //  ============== Notifications APi ==================      //
+// From freecode camp 
+// https://developer.mozilla.org/en-US/docs/Web/API/notification
 Notification.requestPermission();
 
 // JS Nuggets: Notifications API
@@ -22,12 +24,12 @@ function notifyMe() {
 
   function notify() {
     var notification = new Notification("TITLE OF NOTIFICATION", {
-      icon: "http://carnes.cc/jsnuggets_avatar.jpg",
-      body: "Hey! You are on notice!",
+    //   icon: "http://carnes.cc/jsnuggets_avatar.jpg",
+    //   body: "Hey! You are on notice!",
     });
 
     notification.onclick = function () {
-      window.open("http://carnes.cc");
+    //   window.open("http://carnes.cc");
     };
     setTimeout(notification.close.bind(notification), 7000);
   }
