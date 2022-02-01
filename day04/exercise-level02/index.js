@@ -20,7 +20,7 @@ let numberInt = parseInt(number);
 console.log(numberInt); // 10
 
 // Exercise 2b
-//  parseFloat('9.8')
+parseFloat("9.8");
 let numsFloat = "9.8";
 console.log(typeof numsFloat); // string
 let numbersFloat = parseFloat(++numsFloat);
@@ -44,9 +44,10 @@ let numRandon = generateRandon * 50;
 console.log(numRandon);
 
 // Generate a random number between 50 and 100 inclusively.
-// let minNums = 50;
-// let floorBt = Math.floor(Math.random(50) * 100);
-// console.log(floorBt);
+function randomBetween(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+console.log(randomBetween(100, 50));
 
 // Exercise 2d
 //Generate a random number between 0 and 255 inclusively.

@@ -19,3 +19,10 @@ number = -5;
 // This the ternary operator
 // number > 0
 //   ? console.log(`${number} is a positive number`)
+
+// Exampl
+function checkEqual(a, b) {
+  return a === b ? "Equal" : "Not Equal";
+}
+
+console.log(checkEqual(1, 2)); // 'Not Equal;
