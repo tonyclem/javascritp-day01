@@ -60,3 +60,10 @@ if (music.includes("placebo")) {
 } else {
   console.log(okay);
 }
+
+// Example loop and push
+const ourArray = [];
+
+for (let i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
