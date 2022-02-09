@@ -22,3 +22,24 @@ console.log(stringified);
 var stringJSON = '{ "name":"Beau", "kids":2,"state":"Michigan"}';
 var myParse = JSON.parse(stringJSON);
 console.log(myParse);
+
+//  ==== Json with arrow func ==== //
+function getTweets(uid) {
+  return fetch("//api.users.com/" + uid)
+    .then((response) => {
+      return response.json();
+    })
+    .then((response) => {
+      return response.data;
+    })
+    .then((tweets) => {
+      return tweets.filter((tweet) => {
+        return tweet.stars > 50;
+      });
+    })
+    .then((tweets) => {
+      return tweets.filter((tweet) => {
+        return tweet.rts > 50;
+      });
+    });
+}

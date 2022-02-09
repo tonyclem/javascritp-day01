@@ -55,7 +55,7 @@ let mySelf = {
   myLastNama: "Sunday",
 };
 
-mySelf.age = 27;
+mySelf[age] = 27;
 mySelf["Professio"] = "Web developer";
 
 for (let details in mySelf) {

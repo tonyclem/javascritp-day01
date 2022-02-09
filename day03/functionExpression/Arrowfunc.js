@@ -1,5 +1,8 @@
 //  ========= FUNCTIONS ============= //
 
+//  ======    key     ====== //
+// With the arrow function, it is important to remember that statements need to have curly braces. Once the curly braces are present, you always need to write return as well.
+
 const myFunction = (a, z) => {
   const myFunctionInner = (c, y) => {
     return c + y;

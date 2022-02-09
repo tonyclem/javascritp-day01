@@ -28,3 +28,11 @@ console.log(spreadOut());
 let thisArray2 = ["sage", "rosemary", "parsley", "thyme"];
 
 let thatArray3 = ["basil", "cilantro", ...thisArray2, "coriander"];
+
+// Example
+let topics = ["javaScript", "Node.js", "Api fetch", "React", "MangoDb"];
+
+let knownlegdesAbout = ["Html", "Css", "JavaScrips", "Api fetch", "React"];
+
+let combeinedTogether = [...topics, ...knownlegdesAbout];
+console.log(combeinedTogether);
