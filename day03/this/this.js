@@ -58,7 +58,7 @@ function add(c, d) {
   return this.a + this.b + c + d;
 }
 
-var o = { a: 1, b: 3 };
+let o = { a: 1, b: 3 };
 console.log(add.call(o, 5, 7));
 console.log(add.apply(o, [10, 20]));
 
@@ -66,16 +66,16 @@ function f() {
   return this.a;
 }
 
-var g = f.bind({ a: "unicycle" });
+let g = f.bind({ a: "unicycle" });
 console.log(g());
 
-var h = g.bind({ a: "cereal" }); // won’t work a second time
+let h = g.bind({ a: "cereal" }); // won’t work a second time
 console.log(h());
 
-var o = { a: 8, f: f, g: g, h: h };
+let o = { a: 8, f: f, g: g, h: h };
 console.log(o.f(), o.g(), o.h());
 
-var o = {
+let o = {
   traditionalFunc: function () {
     console.log("traditionalFunc this === o?", this === o);
   },
@@ -89,7 +89,7 @@ o.traditionalFunc();
 
 o.arrowFunc();
 
-var o = {
+let o = {
   prop: 37,
   f: function () {
     return this.prop;
@@ -98,7 +98,7 @@ var o = {
 
 console.log(o.f()); // logs 37
 
-var o = { prop: 23 };
+let o = { prop: 23 };
 
 function independent() {
   return this.prop;
@@ -107,3 +107,31 @@ function independent() {
 o.f = independent;
 
 console.log(o.f());
+
+// Exmple this
+// By default this refers to the outer most global object, the window. We can easily show how invoking functions in different ways binds the this value differently:
+
+let myFunction = function () {
+  console.log(this); // this = global, [object Window]
+};
+myFunction();
+
+let myObject = {};
+myObject.myMethod = function () {
+  console.log(this); // this = Object { myObject }
+};
+
+let nav = document.querySelector(".nav"); // <nav class="nav">
+let toggleNav = function () {
+  console.log(this); // this = <nav> element
+};
+nav.addEventListener("click", toggleNav, false);
+
+// Example
+let links = document.querySelectorAll("nav li");
+for (let i = 0; i < links.length; i++) {
+  console.log(this); // [object Window]
+}
+// The this value here doesn’t refer to our elements, we’re not invoking anything or changing the scope.
+
+// the link to get more information: https://ultimatecourses.com/blog/everything-you-wanted-to-know-about-javascript-scope
