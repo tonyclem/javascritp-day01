@@ -92,47 +92,47 @@ const todos2 = [
 todos2.push({ id: 5, text: "i can do it", isCompleted: true });
 console.log(todos2[2]);
 
-todos.pop();
-console.log(todos);
+todos2.pop();
+console.log(todos2);
 
 // Exercise 7 b
 function apples() {
   console.log("apple");
 }
-console.dir(document);
+// console.dir(document);
 
-const todos = ["Maria", "id", "work smart", "isCompleted"];
+const todos3 = ["Maria", "id", "work smart", "isCompleted"];
 
-for (name of todos) {
-  console.log(`Hello world ${name}`);
-  if (name !== "Maria") {
+for (name1 of todos3) {
+  console.log(`Hello world ${name1}`);
+  if (name1 !== "Maria") {
     console.log("good day ");
     break;
   }
 }
 
 // Exercise 8
-const title = document.querySelector(".title");
-const changeColor = document.querySelector(".changeColor");
-const changeRemove = document.querySelector(".changeRemove");
+// const title = document.querySelector(".title");
+// const changeColor = document.querySelector(".changeColor");
+// const changeRemove = document.querySelector(".changeRemove");
 
-const bgcolor = (title.style.background = "blue");
-title.style.color = "white";
+// const bgcolor = (title.style.background = "blue");
+// title.style.color = "white";
 
-function changeTheColor() {
-  title.style.color = "red";
-  title.style.fontSize = "30px";
-}
+// function changeTheColor() {
+//   title.style.color = "red";
+//   title.style.fontSize = "30px";
+// }
 
-changeColor.addEventListener("click", changeTheColor);
+// changeColor.addEventListener("click", changeTheColor);
 
-const nameList = document.querySelector(".name-list li");
+// const nameList = document.querySelector(".name-list li");
 
-for (user of userList) {
-  user.addEventListener("click", function () {
-    this.style.color = "red";
-  });
-}
+// for (user of userList) {
+//   user.addEventListener("click", function () {
+//     this.style.color = "red";
+//   });
+// }
 
 // Exercise 9
 function test() {
@@ -181,3 +181,15 @@ console.log(3 === 4); // false
 console.log(true === true); // true
 console.log(true === false); // false
 console.log(null === null); // true
+
+// example
+let favoriteTree = "birch";
+console.log(favoriteTree);
+
+// Example
+// let favoriteTree2 = "birch2";
+// actual: whatever is stored in favoriteTree2 on this line
+// expected: 'birch2'
+// const prediction1 = favoriteTree2 === "birch2";
+console.log("Hello Assert");
+console.assert(2 === 2, "No is False");
