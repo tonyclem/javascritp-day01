@@ -37,7 +37,7 @@ function findGreaterOrEqual(a, b) {
     return "b is greater";
   }
 }
-
+console.log(findGreaterOrEqual(8, 6));
 function findGreaterOrEqual1(a, b) {
   return a === b
     ? "a and b are equal"
@@ -45,6 +45,7 @@ function findGreaterOrEqual1(a, b) {
     ? "a is greater"
     : "b is greater";
 }
+console.log(findGreaterOrEqual(5, 5));
 
 //Example
 let locked = 1;
