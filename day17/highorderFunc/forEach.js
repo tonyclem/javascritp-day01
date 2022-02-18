@@ -11,5 +11,7 @@ const companies = [
 ];
 
 companies.forEach((company) => {
-  console.log(company.name);
+  console.log(company.start);
 });
+
+console.log(companies);
