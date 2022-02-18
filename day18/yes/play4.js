@@ -19,10 +19,8 @@ const mondayTasks = [
 
 let total_time = 0;
 const hourlyRate = 25;
-// tasks and an hourly rate as arguments and return a formatted Euro amount
-// (e.g: `€11.34`) comprising the total earnings.
 mondayTasks.forEach(function (task) {
   total_time += task.duration;
 });
 
-console.log(`hello bro ${total_time + hourlyRate}`);
+console.log(`hello bro ${(total_time / 60) * hourlyRate}`);
