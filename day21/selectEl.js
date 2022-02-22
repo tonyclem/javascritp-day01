@@ -9,12 +9,9 @@ const choice = creatures.map(({ name, habitat }) => ({
   name,
   habitat,
 }));
-console.log(choice);
+// console.log(choice);
 
 const selectName = creatures.filter((name) => name.habitat === "Ocean");
 console.log(selectName);
-
-// const getName = selectName.map((myName) => {
-//   console.log(myName);
-// });
-// console.log(getName);
+const selectOneEl = selectName.filter((select) => select.name === "Shark");
+console.log(selectOneEl);

@@ -39,12 +39,18 @@ const students = [
   },
 ];
 
-const ourStudents = students.filter((student) => student.graduated !== true);
-const presentStudent = ourStudents.map(({ name }) => ({
-  name,
-  role: "Student",
-}));
-console.log(presentStudent);
+const hyfRole = () => {
+  const ourStudents = students.filter((student) => student.graduated !== true);
+  const presentStudent = ourStudents.map(({ name }) => ({
+    name,
+    role: "Student",
+  }));
+  // console.log(presentStudent);
 
-const getMentor = mentors.map(({ name }) => ({ name, role: "mentor" }));
-console.log(getMentor);
+  const getMentor = mentors.map(({ name }) => ({ name, role: "mentor" }));
+  // console.log(getMentor);
+
+  return [...presentStudent, ...getMentor];
+};
+
+console.log(hyfRole());
