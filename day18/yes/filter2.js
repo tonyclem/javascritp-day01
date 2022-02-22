@@ -6,28 +6,28 @@ const fruitBasket = [
   "banana",
   "watermelon",
   "lemon",
+  "apple",
 ];
 
-let takeOutFruit;
-function sanitizeFruitBasket(fruitBasket, takeOutFruitBasket) {
-  takeOutFruitBasket = fruitBasket;
-  let newArr = takeOutFruitBasket.filter((takeOutFruit) => {
-    if (takeOutFruit === "lemon") {
+// function sanitizeFruitBasket(myArray, fruit) {
+//   myArray.push(fruit);
+//   const newArray = myArray.filter((element) => element != "lemon");
+//   console.log(fruit);
+//   return newArray;
+// }
+// console.log(sanitizeFruitBasket(fruitBasket));
+// console.log(sanitizeFruitBasket(fruitBasket, "apple"));
+// console.log(sanitizeFruitBasket(fruitBasket, "pear"));
+
+function sanitizeFruitBasket(arrOfFruit, removeFruit) {
+  let newArr = arrOfFruit.filter((element) => {
+    if (element === removeFruit) {
+      console.log(removeFruit);
       return false;
     }
     return true;
   });
-  console.log(newArr);
-}
-sanitizeFruitBasket(fruitBasket, takeOutFruit);
 
-//  exact quickly
-// let grocery = fruitBasket.filter(function (takeOutFruit) {
-//     if (takeOutFruit === "lemon") {
-//       return false;
-//     }
-//     if (takeOutFruit !== "lemon") {
-//       true;
-//     }
-//   });
-//   return grocery;
+  return newArr;
+}
+console.log(sanitizeFruitBasket(fruitBasket, "lemon"));

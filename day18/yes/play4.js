@@ -19,8 +19,10 @@ const mondayTasks = [
 
 let total_time = 0;
 const hourlyRate = 25;
-mondayTasks.forEach(function (task) {
-  total_time += task.duration;
-});
+mondayTasks.forEach((task) => (total_time += task.duration));
+// Same code
+// mondayTasks.forEach(function (task) {
+//   total_time += task.duration;
+// });
 
 console.log(`hello bro ${(total_time / 60) * hourlyRate}`);

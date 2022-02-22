@@ -22,9 +22,7 @@ const actual = [1, 2, 3, 4];
 function doubleEvenNumbers(numbers) {
   const newNumbers = [];
   for (let i = 0; i < numbers.length; i++) {
-    // ?
     if (numbers[i] % 2 === 0) {
-      // ?
       newNumbers.push(numbers[i] * 2);
     }
   }
@@ -41,12 +39,20 @@ actual2.forEach((actual) => {
 });
 console.log(newNumbers1);
 
-const actual = doubleEvenNumbers([1, 2, 3, 4]);
-console.log(actual);
-function doubleEvenNumbers(numbers) {
+const actual3 = doubleEvenNumbers([1, 2, 3, 4]);
+console.log("actual 3:", actual3);
+function doubleEvenNumbers3(numbers) {
   const newNumbers = [];
   numbers.filter((number) => number % 2 === 0);
   newNumbers.push(numbers * 2);
   console.log(numbers);
   console.log(newNumbers);
 }
+
+function doubleEvenNumbers4(numbers) {
+  const newNumbers = [];
+  numbers.filter((number) => number % 2 === 0 && newNumbers.push(number * 2));
+  return newNumbers;
+}
+const actual4 = doubleEvenNumbers([1, 2, 3, 4]);
+console.log("actual 4:", actual4);
