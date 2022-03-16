@@ -28,7 +28,7 @@ function computeEarnings() {
     (prev, tackRate) => (prev += tackRate.duration),
     0
   );
-  console.log(formatPrice); // ? 450
+  console.log(formatPrice);
   total.push(formatPrice);
   console.log(total);
 }

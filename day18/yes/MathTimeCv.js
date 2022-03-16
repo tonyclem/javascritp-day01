@@ -1,10 +1,10 @@
 var time = "7:30:00";
 var amount =
   time
-    .split(":") //?
-    .map((a, b) => a / 60 ** b) // ?
-    .reduce((a, b) => a + b) // ?
-    .toFixed(2) * 25; // ?
+    .split(":")
+    .map((a, b) => a / 60 ** b)
+    .reduce((a, b) => a + b)
+    .toFixed(2) * 25;
 console.log(amount);
 
 function getAmount(timeSpent) {
@@ -15,10 +15,10 @@ function getAmount(timeSpent) {
   var secs = time[2];
 
   if (secs != undefined && secs > 29) {
-    mins++; //?
+    mins++;
   }
   var amount = (+hours + +mins / 60) * amountPerhour;
-  return parseFloat(amount).toFixed(2); // ?
+  return parseFloat(amount).toFixed(2);
 }
 
 console.log(getAmount("1:25:58"));
@@ -38,4 +38,4 @@ const formatCash = (n) => {
 
 console.log(formatCash(2500));
 
-Math.abs((450 / 60) * 25); // ?
+Math.abs((450 / 60) * 25);

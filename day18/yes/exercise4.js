@@ -5,7 +5,7 @@ fruits = [
   { description: "kiwi", Amount: 35 },
   { description: "watermelon", Amount: 25 },
 ];
-const sumall = fruits
+const small = fruits
   // .map((item) => item.Amount)
   .reduce((prev, item) => prev + item.Amount, 0);
-console.log(sumall); // ?
+console.log(small); // ?

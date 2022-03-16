@@ -31,10 +31,10 @@ function sanitizeFruitBasket(fruitBasket, takeOutFruit) {
       true;
     }
   });
-  //   return grocery; //?
+  //   return grocery;
   console.log(grocery);
 }
-sanitizeFruitBasket(fruitBasket, takeOutFruit); // ?
+sanitizeFruitBasket(fruitBasket, takeOutFruit);
 
 // Exercise 3
 
