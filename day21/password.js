@@ -11,4 +11,4 @@ passwordList.map(({ password, times, letter }) => {
   const isValid = appearances >= minTimes && appearances <= maxTimes;
 
   return isValid ? "VALID" : "INVALID";
-}); // ?
+});
