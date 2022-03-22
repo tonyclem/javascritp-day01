@@ -11,9 +11,6 @@ const getDeliveriesPerDriver = (deliveries, search) => {
     }
   });
   return deliveriesPerDriver;
-  // return deliveries.filter((delivery) => {
-  //   return delivery.description.includes(search);
-  // });
 };
 
 const testDeliveries = [

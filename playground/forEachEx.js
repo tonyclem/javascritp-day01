@@ -30,7 +30,9 @@ const items = [
   },
 ];
 
-let receiveArr = [];
+let receiveArr = [
+  { id: "v---10", title: "programming", tag: ["keypad", "desktop"], data: 00 },
+];
 
 items.forEach((item) => {
   if (item.data > 10) {
