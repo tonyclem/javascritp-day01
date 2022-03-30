@@ -39,3 +39,24 @@ const uniqueValues3 = (str) => {
 };
 
 console.log(uniqueValues3("abcdef"));
+
+// Example III
+const uniqueValues4 = (str) => {
+  let letter = new Set();
+  for (let elem of str) {
+    if (letter.has(elem)) {
+      return false;
+    }
+    letter.add(elem);
+  }
+  return true;
+};
+
+console.log(uniqueValues4("abcdea"));
+
+// Example IIII
+const uniqueValues5 = (str) => {
+  return new Set(str).size === str.length;
+};
+
+console.log(uniqueValues5("acnbg"));
