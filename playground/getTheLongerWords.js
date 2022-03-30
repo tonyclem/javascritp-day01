@@ -59,8 +59,9 @@ const longerWords4 = (str) => {
   let max = [""];
 
   for (let i = 0; i < words.length; i++) {
-    if (words[i].length >= size) {
-      words[i].length = size;
+    if (size <= words[i].length) {
+      size = words[i].length;
+
       if (max[max.length - 1].length < words[i].length) {
         max = [];
         max.push(words[i]);

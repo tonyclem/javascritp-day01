@@ -17,13 +17,13 @@ console.log(arrSum2([5, 5, 15, 24]));
 
 // Example III
 const arrSum3 = () => {
-  let arr = [9, 6, 9, 11, 35];
+  let arr = [9, 6, 1, 10];
   let total = [];
-  arr.forEach((ar, idx) => {
+  arr.forEach((array, idx) => {
     let result;
     for (let i = idx + 1; i < arr.length; i++) {
-      if (ar + arr[i] === 46) {
-        result = ar + arr[i];
+      if (array + arr[i] === 15) {
+        result = array += arr[i];
         total.push(result);
       }
     }

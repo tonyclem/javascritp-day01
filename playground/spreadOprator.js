@@ -12,11 +12,11 @@ const fun = (getV, s = []) => {
 };
 console.log(fun(creatures, "S"));
 
-const arr = ["understand", "knowledge", "lover"];
-const marge = [
-  ...creatures,
-  ...arr,
-  "clement",
-  { pro: "web Developer", boolean: "true" },
-];
-console.log(marge);
+// const arr = ["understand", "knowledge", "lover"];
+// const marge = [
+//   ...creatures,
+//   ...arr,
+//   "clement",
+//   { pro: "web Developer", boolean: "true" },
+// ];
+// console.log(marge);
