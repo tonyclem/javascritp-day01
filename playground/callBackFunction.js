@@ -8,13 +8,13 @@ let students = [
 ];
 
 let studentFun = function (obj, callBack) {
-  for (let i = 0; i < obj.length; i++) {
-    if (obj[i].location.toLowerCase() === "east") {
+  obj.forEach((ob) => {
+    if (ob.location.toLowerCase() === "east") {
       if (typeof callBack === "function") {
-        callBack(obj[i]);
+        callBack(ob);
       }
     }
-  }
+  });
 };
 
 studentFun(students, function (obj) {

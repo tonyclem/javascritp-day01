@@ -29,7 +29,7 @@ const items = [
   },
 ];
 
-const lookItem = (item, search) => {
+const lookItem = (item = [], search = "") => {
   return item.filter((it) => {
     return it.title.includes(search) || it.tags.includes(search);
   });

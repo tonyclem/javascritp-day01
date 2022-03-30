@@ -1,4 +1,4 @@
-const getDeliveriesPerDriver = (deliveries, search) => {
+const getDeliveriesPerDriver = (deliveries) => {
   const deliveriesPerDriver = {};
   deliveries.forEach((delivery) => {
     const driverId = delivery.description;
