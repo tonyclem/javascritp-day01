@@ -1,3 +1,5 @@
+// Exercise not yet completed
+
 const countLetter = (str) => {
   let tempArr = str.split(" ");
   tempArr = tempArr.map((item) => {
