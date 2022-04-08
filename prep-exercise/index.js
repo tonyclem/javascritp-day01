@@ -1,16 +1,16 @@
-// const trafficLight = {
-//   possiblilityTraffic: ["green", "oragon", "red"],
-//   stateIndex: 2,
-// };
-// const current = trafficLight.possiblilityTraffic[trafficLight.stateIndex];
-// console.log(current);
-
-function welcomeToVScode() {
-  console.log(helleWorld);
-}
-
 function helloWorld() {
   return "hello World";
 }
-
+function welcomeToVScode() {
+  return helloWorld();
+}
 welcomeToVScode();
+
+// Example II
+
+let arrItem = ["love", "wisdom", "courage", "understanding", "unity"];
+if (arrItem.find((tag) => tag === "courage")) {
+  return "yes is there";
+} else {
+  return "no sorry";
+}
