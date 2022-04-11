@@ -1,4 +1,4 @@
-//  function statement
+//  function statement or declaration
 function nameIS(name) {
   return "Good Morning " + name;
 }
@@ -66,3 +66,8 @@ let numbersTwo = [2, 4, 6, 8, 10];
 const multiplyNumByTwo = (number) => number * 3;
 let multipliedNumByTwo = numbersTwo.map(multiplyNumByTwo);
 console.log(multipliedNumByTwo);
+
+// Function Expression
+const greet = function (who) {
+  return `Hello, ${who}`;
+};

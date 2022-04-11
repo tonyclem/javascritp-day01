@@ -56,7 +56,7 @@ let mySelf = {
 };
 
 mySelf[age] = 27;
-mySelf["Professio"] = "Web developer";
+mySelf["Profession"] = "Web developer";
 
 for (let details in mySelf) {
   if (mySelf.hasOwnProperty(details)) {

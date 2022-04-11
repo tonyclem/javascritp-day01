@@ -59,7 +59,6 @@ function getHeadAndBody(person) {
     head: person.head,
     body: person.body,
   };
-
   return headAndBody;
 }
 

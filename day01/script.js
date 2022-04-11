@@ -14,21 +14,21 @@ console.log(life);
 
 // Exercise 4
 //  JavaScript  types
-let numberTypess = 42; // Number
-let stringTypesss = "HackYourFuture"; // String
-let booleanTypess = true == false; // Boolean
-let arrayTypess = [
+let numberTypes = 42; // Number
+let stringTypes = "HackYourFuture"; // String
+let booleanTypes = true == false; // Boolean
+let arrayTypes = [
   [1, 2, 3],
   ["what", "why", "when", "how"],
   [true, false],
 ]; // Array
 let theSameArray = new Array(1, 2, 3); //
-let objectTypess = { name: "clem", age: 100, profession: "Web Developer" }; // Object
-let functionTypess = function cle() {
+let objectTypes = { name: "clem", age: 100, profession: "Web Developer" }; // Object
+let functionTypes = function cle() {
   return true;
 }; // Function
-let undefinedTypess = undefined; // `undefined
-let symbolTypess; // * + > < | &  etc // symbol
+let undefinedTypes = undefined; // `undefined
+let symbolTypes; // * + > < | &  etc // symbol
 let emptyVariable = null; //
 
 // Exercise 5

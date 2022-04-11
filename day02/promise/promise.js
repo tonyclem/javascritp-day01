@@ -45,7 +45,6 @@ function sumAsync(x, y) {
         resolve(x + y);
       }
     }, 500);
-
     // we don't need to return anything
   });
 }
@@ -61,17 +60,14 @@ sumAsync(-5, 7)
 // Exercise 3
 const ArrowFunction = (a, b) => {
   console.log("1. What's the outcome first wait and see");
-
-  const arrowA = new Promise((solve, ject) => {
+  const arrowA = new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log("4. Start moving as fast as you can move");
-      solve(a * b);
+      resolve(a * b);
     }, 600);
-
     console.log("2. first Async promise initial move");
   });
   console.log("3. Async promise on moving");
-
   return arrowA;
 };
 

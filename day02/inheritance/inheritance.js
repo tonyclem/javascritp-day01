@@ -26,7 +26,7 @@ Person.prototype.describe = function () {
   return this.name + ", " + this.age + " years old.";
 };
 
-// Exaple
+// Example
 var Person = function () {};
 
 Person.prototype.initialize = function (name, age) {

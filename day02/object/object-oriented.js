@@ -34,7 +34,7 @@ console.log(student.age);
 
 console.log(student.studentInfo());
 
-// Examplex 3
+// Example 3
 let myPerson = {
   firstName: "Clement",
   lastName: "Sunday",
