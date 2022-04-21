@@ -24,6 +24,7 @@ console.log(getDifference(arr1, arr2));
 
 // Example
 const arr1b = [{ id: 1, name: "Tom" }];
+
 const arr2b = [
   { id: 1, name: "Tom" },
   { id: 2, name: "John" },
@@ -31,7 +32,7 @@ const arr2b = [
 
 function getDifference2(array1, array2) {
   return array1.filter((object1) => {
-    return !array2.some((object2) => {
+    return array2.some((object2) => {
       return object1.id === object2.id;
     });
   });

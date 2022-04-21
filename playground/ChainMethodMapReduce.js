@@ -106,7 +106,7 @@ const fieldByIndex = (products, field) => {
   }, {});
 };
 
-console.log(fieldByIndex(products, "size"));
+console.log(fieldByIndex(products, "colorId"));
 
 const places = {
   tours: {
@@ -119,7 +119,6 @@ const places = {
     },
   },
 };
-
 const paths = ["tours", "nearMe", "mumbai", "loc"];
 function getLocation(places, paths) {
   return paths.reduce((object, path) => {
