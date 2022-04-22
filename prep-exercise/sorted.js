@@ -4,7 +4,7 @@ let secretNumber = secretCode.split("$");
 let minusEqual = secretNumber.map((item) => {
   return item.replace("=", "");
 });
-console.log(minusEqual);
+// console.log(minusEqual);
 
 // Example II
 let sortTheSecretCode =
@@ -17,4 +17,15 @@ let sortTheEqual = sortTheHash.map((item) => {
   return item.replace("=", "");
 });
 let joinTheEmpty = sortTheEqual.join(" ");
-console.log([joinTheEmpty]);
+// console.log([joinTheEmpty]);
+
+// Example III
+let sortTheSecretCode3 =
+  "#accessToken=myToken&expiresIn=3600&name&email&picture&";
+let sortAw = sortTheSecretCode3
+  .substring(1)
+  .split("&")
+  .map((item) => {
+    return item.replace("=", "");
+  });
+console.log(sortAw);
