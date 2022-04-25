@@ -3,9 +3,9 @@
 
 // You can use let instead of const too, if you reassign the variable inside the block.
 
-const iterable = [10, 20, 30];
+const iterable1 = [10, 20, 30];
 
-for (const value of iterable) {
+for (const value of iterable1) {
   console.log(value);
 }
 
@@ -42,7 +42,7 @@ for (const n of fibonacci()) {
 }
 
 //   Example You can also iterate over an object that explicitly implements the iterable protocol:
-const iterable = {
+const iterable3 = {
   [Symbol.iterator]() {
     return {
       i: 0,
@@ -56,7 +56,7 @@ const iterable = {
   },
 };
 
-for (const value of iterable) {
+for (const value of iterable3) {
   console.log(value);
 }
 

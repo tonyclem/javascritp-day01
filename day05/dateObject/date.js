@@ -7,9 +7,9 @@ const now2 = new Date();
 console.log(now.getFullYear()); // 2022
 
 // Getting month
-const now = new Date();
-console.log(now.getMonth()); // 0, because the month is January,  month(0-11)
+const now3 = new Date();
+console.log(now3.getMonth()); // 0, because the month is January,  month(0-11)
 
 // Getting date
-const now = new Date();
-console.log(now.getDate()); // 4, because the day of the month is 4th,  day(1-31)
+const now4 = new Date();
+console.log(now4.getDate()); // 4, because the day of the month is 4th,  day(1-31)

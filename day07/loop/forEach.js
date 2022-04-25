@@ -1,12 +1,12 @@
 // Array.forEach()
 
-const numbers = [1, 2, 3, 4];
+const numbers1 = [1, 2, 3, 4];
 let sum = 0;
 
-numbers.forEach((x) => {
+numbers1.forEach((x) => {
   sum += x;
 });
-console.log(sum); // -> 10
+console.log(sum); 
 
 // custom forEach() implementation
 function forEach(arr, func) {
@@ -16,10 +16,10 @@ function forEach(arr, func) {
 }
 
 const numbers = [1, 2, 3, 4];
-let sum = 0;
+let sum2 = 0;
 
 forEach(numbers, (x) => {
-  sum += x;
+  sum2 += x;
 });
 
-console.log(sum); // -> 10
+console.log(sum2); 

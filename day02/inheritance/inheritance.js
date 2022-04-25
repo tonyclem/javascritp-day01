@@ -71,7 +71,7 @@ alert(rabbit.jumps); // true
 
 // The prototype chain can be longer:
 
-let animal = {
+let animal1 = {
   eats: true,
   walk() {
     alert("Animal walk");
@@ -95,7 +95,7 @@ alert(longEar.jumps); // true (from rabbit)
 // Example
 
 // animal has methods
-let animal = {
+let animal2 = {
   walk() {
     if (!this.isSleeping) {
       alert(`I walk`);
@@ -115,7 +115,7 @@ let rabbit = {
 rabbit.sleep();
 
 alert(rabbit.isSleeping); // true
-alert(animal.isSleeping);
+alert(animal2.isSleeping);
 
 // example from this link: https://javascript.info/prototype-inheritance
 // See more here: https://www.learn-js.org/

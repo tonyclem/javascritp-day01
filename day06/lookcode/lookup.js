@@ -54,7 +54,7 @@ function lookUpProfile(name, prop) {
   // Only change code above this line
 }
 
-lookUpProfile("Akira", "likes");
+console.log(lookUpProfile("Akira", "likes"));
 
 //   Solution2 for freeCode camp
 // function lookUpProfile(name, prop) {

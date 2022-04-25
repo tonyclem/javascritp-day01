@@ -18,9 +18,9 @@ let numInt = parseInt("9.8"); // 9
 // Write three JavaScript statement which provide falsy value.
 let oneE = 10;
 if (oneE > 4) {
-  return console.log("yes is true:", true);
+  console.log("yes is true:", true);
 } else {
-  return console.log("No it's false:", false);
+  console.log("No it's false:", false);
 }
 
 // Example 2
@@ -39,21 +39,21 @@ while (i < 5) {
 const myArray = [];
 
 // Only change code below this line
-let i = 5;
-while (i >= 0) {
-  myArray.push(i);
-  i--;
+let ib = 5;
+while (ib >= 0) {
+  myArray.push(ib);
+  ib--;
 }
 console.log(myArray);
 
 // Push the odd numbers from 9 through 1 to myArray using a for loop.
-const myArray = [];
+const myArrayA = [];
 
 // Only change code below this line
 for (let i = 9; i >= 1; i -= 2) {
-  myArray.push(i);
+  myArrayA.push(i);
 }
-console.log(myArray);
+console.log(myArrayA);
 
 // Declare and initialize a variable total to 0. Use a for loop to add the value of each element of the myArr array to total.
 
@@ -109,13 +109,13 @@ multiplyAll([
 
 // do while loop
 // Setup
-const myArray = [];
-let i = 10;
+const myArrayC = [];
+let ic = 10;
 
 // Only change code below this line
 do {
-  myArray.push(i);
-  i++;
-} while (i < 5);
+  myArrayC.push(ic);
+  ic++;
+} while (ic < 5);
 
-console.log(myArray);
+console.log(myArrayC);

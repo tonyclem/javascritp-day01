@@ -12,9 +12,6 @@ function myFunction() {
 
 // CONVERTING MISTAKES INTO ERRORS
 
-var x = 3.14;
-delete x;
-
 var obj = {};
 Object.defineProperty(obj, "x", { value: 0, writable: false });
 obj.x = 3.14;
@@ -35,16 +32,16 @@ function sum(a, a, c) {
 
 // WITH AND EVAL CHANGES
 
-var x = 17;
-with (obj) {
-  x; // Is this var x or obj.x?
+var b = 17;
+if (obj) {
+  b; // Is this var x or obj.x?
 }
 
 eval("var x;");
 
-var x = 17;
+var c = 17;
 var evalX = eval("'use strict'; var x = 42; x;");
-console.assert(x === 17);
+console.assert(c === 17);
 console.assert(evalX === 42);
 
 // SECURING JAVASCRIPT

@@ -1,11 +1,9 @@
 // Array.reduce()
 
 const numbers = [1, 2, 3, 4];
-
 const sum = (a, b) => a + b;
 const total = numbers.reduce(sum, 0);
-
-console.log(total); // -> 10
+console.log(total);
 
 // Example 2
 // A custom reduce() implementation

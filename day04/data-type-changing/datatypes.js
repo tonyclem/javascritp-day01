@@ -13,19 +13,19 @@
 // parseFloat()
 
 // parseInt
-let num = "10";
-let numInt = parseInt(num);
-console.log(numInt); // 10
+let num1 = "10";
+let numInt1 = parseInt(num1);
+console.log(numInt1); // 10
 
 //  Number
-let num = "10";
-let numInt = Number(num);
-console.log(numInt); // 10
+let num2 = "10";
+let numInt2 = Number(num2);
+console.log(numInt2); // 10
 
 //  +num
-let num = "10";
-let numInt = +num;
-console.log(numInt); // 10
+let num3 = "10";
+let numInt3 = +num3;
+console.log(numInt3); // 10
 
 // String to Float
 // We can convert string float number to a float number.
@@ -33,19 +33,19 @@ console.log(numInt); // 10
 // An example of a string float number: '9.81', '3.14', '1.44', etc. We can convert string float to number using the following methods:
 
 // ParseFloat
-let num = "9.81";
-let numFloat = parseFloat(num);
-console.log(numFloat); // 9.81
+let num4 = "9.81";
+let numFloat4 = parseFloat(num4);
+console.log(numFloat4); // 9.81
 
 //  Number
-let num = "9.81";
-let numFloat = Number(num);
-console.log(numFloat); // 9.81
+let num5 = "9.81";
+let numFloat5 = Number(num5);
+console.log(numFloat5); // 9.81
 
 // +num
-let num = "9.81";
-let numFloat = +num;
-console.log(numInt); // 9.81
+let num6 = "9.81";
+let numFloat6 = +num6;
+console.log(numFloat6); // 9.81
 
 // Float to Int
 // We can convert float numbers to integers. We use the following method to convert float to int:

@@ -4,23 +4,21 @@
 
 //  Example 1
 let age = 18;
-let message;
+let message1;
 
 if (age >= 16) {
-  message = "You can drive.";
+  message1 = "You can drive.";
 } else {
-  message = "You cannot drive.";
+  message1 = "You cannot drive.";
 }
+console.log(message1);
 
-console.log(message);
-
-//  same is diffrence way ternary operator
+//  same is difference way ternary operator
 
 // condition ? expressionIfTrue : expressionIfFalse;
 
 let ages = 18;
 let messages;
-
 ages >= 16 ? (messages = "You can drive.") : (messages = "You cannot drive.");
 
 console.log(messages);
@@ -28,9 +26,7 @@ console.log(messages);
 // Example 2
 let agess = 18;
 let messagess;
-
 messagess = age >= 16 ? "You can drive." : "You cannot drive.";
-
 console.log(messagess);
 
 // Example 3

@@ -25,7 +25,7 @@ const person = {
 };
 
 // If we want to get head, the old way:
-let head = person.head;
+let headed = person.head;
 
 // ES6 Destructuring
 let { head } = person;
