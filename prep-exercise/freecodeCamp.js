@@ -18,3 +18,4 @@ const funcSpread = (args, num) => {
     return arr;
 }
 console.log(funcSpread([4, 5,7, 3,8], 2));
+
