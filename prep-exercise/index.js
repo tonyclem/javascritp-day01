@@ -10,7 +10,7 @@ welcomeToVScode();
 
 let arrItem = ["love", "wisdom", "courage", "understanding", "unity"];
 if (arrItem.find((tag) => tag === "courage")) {
-  return "yes is there";
+  console.log("yes is there");
 } else {
-  return "no sorry";
+  console.log("no sorry");
 }
