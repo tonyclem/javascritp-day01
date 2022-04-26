@@ -8,8 +8,7 @@ const inventoryName = [
 function isCherries(fruit) {
   return fruit.name === "cherries";
 }
-
-// console.log(inventoryName.find(isCherries)); //  {name: 'cherries', quantity: 5} // true
+// console.log(inventoryName.find(isCherries)); //  {name: 'cherries', quantity: 5} 
 
 // Exercise 2
 function filteredArray(arr, elem) {
@@ -21,8 +20,7 @@ function filteredArray(arr, elem) {
   });
   return newArr;
 }
-
-// console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+// console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9],[4,10,5]], 3));
 
 // Exercise 3
 const eyeColor = "eyeColor";
@@ -55,7 +53,6 @@ let fruit = checkInventory("apples");
 const getCurrentFood = (food) => {
   return food;
 };
-
 let selectedFood = getCurrentFood("apples");
 let inventory = foods[selectedFood];
 // console.log(inventory);
@@ -84,87 +81,69 @@ let users = {
 //   Finish writing the function so that it returns true if the object passed to it contains all four names, Alan, Jeff, Sarah and Ryan and returns false otherwise
 // users.hasOwnProperty('Alan');
 function isEveryoneHere(userObj) {
-    return (
-        userObj.hasOwnProperty("Alan") &&
-        userObj.hasOwnProperty("Jeff") &&
-        userObj.hasOwnProperty("Sarah") &&
-        userObj.hasOwnProperty("Ryan")
-    );
+  return (
+    userObj.hasOwnProperty("Alan") &&
+    userObj.hasOwnProperty("Jeff") &&
+    userObj.hasOwnProperty("Sarah") &&
+    userObj.hasOwnProperty("Ryan")
+  );
 }
 
 // console.log(isEveryoneHere(users));
 
 // Exercise 6
 const users2 = {
-    Alan: {
-      online: false
-    },
-    Jeff: {
-      online: true
-    },
-    Sarah: {
-      online: false
-    }
-  }
-  
-//  count the users online
-  function countOnline(usersObj) {
-    // Only change code below this line
-    let count = 0;
-    for (let user in usersObj) {
-        if (usersObj[user].online === true) {
-            count++;
-        }
-    }
-    return count;
+  Alan: {
+    online: false,
+  },
+  Jeff: {
+    online: true,
+  },
+  Sarah: {
+    online: false,
+  },
+};
 
-    // Only change code above this line
+//  count the users online
+function countOnline(usersObj) {
+  let count = 0;
+  for (let user in usersObj) {
+    if (usersObj[user].online === true) {
+      count++;
+    }
   }
-  
-  console.log(countOnline(users2));
+  return count;
+}
+//   console.log(countOnline(users2));
 
 //   Exercise 7
 let user = {
-    name: 'Kenneth',
-    age: 28,
-    data: {
-      username: 'kennethCodesAllDay',
-      joinDate: 'March 26, 2016',
-      organization: 'freeCodeCamp',
-      friends: [
-        'Sam',
-        'Kira',
-        'Tomo'
-      ],
-      location: {
-        city: 'San Francisco',
-        state: 'CA',
-        country: 'USA'
-      }
-    }
-  };
-  
-  function addFriend(userObj, friend) {
-    // Only change code below this line
-    
-    userObj.data.friends.push(friend);
+  name: "Kenneth",
+  age: 28,
+  data: {
+    username: "kennethCodesAllDay",
+    joinDate: "March 26, 2016",
+    organization: "freeCodeCamp",
+    friends: ["Sam", "Kira", "Tomo"],
+    location: {
+      city: "San Francisco",
+      state: "CA",
+      country: "USA",
+    },
+  },
+};
 
-
-    return userObj.data.friends;
-
-
-
-    // Only change code above this line
-  }
-  
+function addFriend(userObj, friend) {
+  userObj.data.friends.push(friend);
+  return userObj.data.friends;
+}
 //   console.log(addFriend(user, 'Pete'));
 
 //  Exercise 8
 // Function that returns a string representing a cup of green tea
-const prepareGreenTea = () => 'greenTea';
-
+const prepareGreenTea = () => "greenTea";
 // Function that returns a string representing a cup of black tea
-const prepareBlackTea = () => 'blackTea';
+const prepareBlackTea = () => "blackTea";
 
 /*
 Given a function (representing the tea type) and number of cups needed, the
@@ -173,20 +152,16 @@ a specific type of tea).
 */
 const getTea = (prepareTea, numOfCups) => {
   const teaCups = [];
-
-  for(let cups = 1; cups <= numOfCups; cups += 1) {
+  for (let cups = 1; cups <= numOfCups; cups += 1) {
     const teaCup = prepareTea();
     teaCups.push(teaCup);
   }
   return teaCups;
 };
+const tea4GreenTeamFCC = getTea(prepareGreenTea, 27);
+const tea4BlackTeamFCC = getTea(prepareBlackTea, 13);
 
-// Only change code below this line
-const tea4GreenTeamFCC = getTea(prepareGreenTea,27);
-const tea4BlackTeamFCC = getTea(prepareBlackTea,13);
-// Only change code above this line
-
-console.log(
-  tea4GreenTeamFCC,
-  tea4BlackTeamFCC
-);
+// console.log(
+//   tea4GreenTeamFCC,
+//   tea4BlackTeamFCC
+// );

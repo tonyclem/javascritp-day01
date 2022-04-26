@@ -69,7 +69,6 @@ function remove(bookName) {
         bookList.splice(index, 1);
     }
 }
-
 console.log(remove("The Hound of the Baskerville"));
 
 
