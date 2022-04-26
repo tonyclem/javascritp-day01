@@ -1,7 +1,7 @@
 const isSubset = (arr1, arr2) => {
   return arr2.every((item) => arr1.includes(item));
 };
-// console.log(isSubset([1, 2, 3, 4, 5, 6, 7, 9], [5, 7, 6, 9])); // false
+// console.log(isSubset([1, 2, 3, 4, 5, 6, 7, 9], [5, 7, 6, 9]));
 
 // Exercise 2
 const students = [
@@ -21,7 +21,6 @@ const passFunc = (std, score) => {
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 32];
 let arrG = arr.every((elem, index, arr) => {
     console.log(` line: -> [[${index}] ${arr}] ${elem}`)
- 
   return elem > 40;
 });
 console.log(arrG);
