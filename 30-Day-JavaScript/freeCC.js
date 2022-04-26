@@ -35,7 +35,7 @@ const Window = function(tabs) {
   
   // Let's create three browser windows
   const workWindow = new Window(['GMail', 'Inbox', 'Work mail', 'Docs', 'freeCodeCamp']); // Your mailbox, drive, and other work sites
-  const socialWindow = new Window(['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium']); // Social sites
+  const socialWindow = new Window(['FB', 'Git', 'Reddit', 'Twitter', 'Medium']); // Social sites
   const videoWindow = new Window(['Netflix', 'YouTube', 'Vimeo', 'Vine']); // Entertainment sites
   
   // Now perform the tab opening, closing, and other operations
@@ -48,11 +48,8 @@ const Window = function(tabs) {
 //  Exercise 8
 
 let fixedValue = 4;
-
 function incrementer() {
-    // Only change code below this line
     return fixedValue += 1;
-    // Only change code above this line
 }
 // console.log(incrementer());
 
@@ -91,9 +88,9 @@ function remove1(list, bookName) {
   return list.filter(book => book !== bookName);
 }
 
-var newBookList = add1(bookList, 'A Brief History of Time');
-var newerBookList = remove1(bookList, 'On The Electrodynamics of Moving Bodies');
-var newestBookList = remove1(add1(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
+let newBookList = add1(bookList, 'A Brief History of Time');
+let newerBookList = remove1(bookList, 'On The Electrodynamics of Moving Bodies');
+let newestBookList = remove1(add1(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
 
 console.log(bookList);
 
