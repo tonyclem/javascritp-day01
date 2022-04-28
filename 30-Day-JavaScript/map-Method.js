@@ -134,6 +134,25 @@ let ratings = watchList.map((movie) => {
 });
 console.log(JSON.stringify(ratings));
 
+// Continuation of the previous exercise
+const filteredList = watchList
+  .map((movie) => {
+    return {
+      title: movie.Title,
+      rating: movie.imdbRating,
+    };
+  })
+  .filter((movie) => parseFloat(movie.rating) >= 8.0);
+
+// same as above solution
+const filteredList2 = watchList
+  .filter((movie) => movie.imdbRating >= 8.0)
+  .map((movie) => ({ title: movie["Title"], rating: movie["imdbRating"] }));
+
+const filteredList3 = watchList
+  .filter(({ imdbRating }) => imdbRating >= 8.0)
+  .map(({ Title: title, imdbRating: rating }) => ({ title, rating }));
+
 // Exercise 2
 // The global variable
 const s = [23, 65, 98, 5];
@@ -148,4 +167,22 @@ Array.prototype.myMap = function (callback) {
 const new_s = s.myMap(function (item) {
   return item * 2;
 });
-console.log(new_s);
+// console.log(new_s);
+
+
+// filter Method
+Array.prototype.myFilter = function(callback) {
+  const newArray = [];
+  for(let i = 0; i < this.length; i++){
+    newArray.push(callback(this[i]))
+  }
+  return newArray;
+};
+
+Array.prototype.myFilter = function(callback){
+  let newArray = [];
+  this.forEach((x) => (callback(x) == true) ? newArray.push(x) : null);
+  return newArray;
+};
+const new_s2 = s.myFilter((item) => item % 2 === 1 );
+// console.log(new_s2)

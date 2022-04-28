@@ -33,3 +33,4 @@ function createPokemonCard(pokemon) {
 }
 
 fetchPokemons();
+
