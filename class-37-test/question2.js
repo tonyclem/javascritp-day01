@@ -61,6 +61,7 @@
     false,
     "Washing machine"
   );
+  console.log(testRentalsNotNearLakeWashingMachine)
   console.assert(testRentalsNotNearLakeWashingMachine.length === 2);
   console.assert(
     testRentalsNotNearLakeWashingMachine[0].id === "r---3" ||
