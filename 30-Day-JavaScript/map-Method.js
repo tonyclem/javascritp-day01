@@ -132,7 +132,7 @@ let ratings = watchList.map((movie) => {
     rating: movie.imdbRating,
   };
 });
-console.log(JSON.stringify(ratings));
+// console.log(JSON.stringify(ratings));
 
 // Continuation of the previous exercise
 const filteredList = watchList
@@ -153,6 +153,15 @@ const filteredList3 = watchList
   .filter(({ imdbRating }) => imdbRating >= 8.0)
   .map(({ Title: title, imdbRating: rating }) => ({ title, rating }));
 
+
+  const getRating = (watchList) => {
+    let averageRating = watchList.filter(getDirectorByName => getDirectorByName.Director === 'Christopher Nolan').map(convertRating => Number(convertRating.imdbRating)).reduce((initial, values) => initial + values) / watchList.filter(getDirectorByName => getDirectorByName.Director === 'Christopher Nolan').length
+    return averageRating;
+  }
+
+
+
+
 // Exercise 2
 // The global variable
 const s = [23, 65, 98, 5];
@@ -169,20 +178,32 @@ const new_s = s.myMap(function (item) {
 });
 // console.log(new_s);
 
-
 // filter Method
-Array.prototype.myFilter = function(callback) {
+Array.prototype.myFilter = function (callback) {
   const newArray = [];
-  for(let i = 0; i < this.length; i++){
-    newArray.push(callback(this[i]))
+  for (let i = 0; i < this.length; i++) {
+    newArray.push(callback(this[i]));
   }
   return newArray;
 };
 
-Array.prototype.myFilter = function(callback){
+Array.prototype.myFilter = function (callback) {
   let newArray = [];
-  this.forEach((x) => (callback(x) == true) ? newArray.push(x) : null);
+  this.forEach((x) => (callback(x) === true ? newArray.push(x) : null));
   return newArray;
 };
-const new_s2 = s.myFilter((item) => item % 2 === 1 );
+const new_s2 = s.myFilter((item) => item % 2 === 1);
 // console.log(new_s2)
+
+// Slice
+
+const funcOfArr = (ani, startAni, endAni) => {
+  let newArr = ani.slice(startAni, endAni);
+  return newArr;
+};
+
+const arr = ["Cat", "Dog", "Lion", "Tiger", "Zebra"];
+
+const getAni = funcOfArr(arr, 1, 4);
+
+console.log(getAni);
