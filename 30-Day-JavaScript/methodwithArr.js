@@ -23,7 +23,7 @@ const foodArr2 = (food = ["candy"]) => {
   });
   return result;
 };
-// console.log(foodArr2(food));
+console.log(foodArr2("no 26: ", food));
 
 // Answer III
 const foodFunc = (food) => {
@@ -39,7 +39,7 @@ const foodFunc = (food) => {
 // console.log(foodFunc(food));
 
 // Answer IIII
-const foodFunc2 = (food = ["candy"]) => {
+const foodFunc2b = (food = ["candy"]) => {
   const result = {};
   for (let i = 0; i < food.length; i++) {
     if (result[food[i].type]) {
@@ -50,7 +50,7 @@ const foodFunc2 = (food = ["candy"]) => {
   }
   return result;
 };
-// console.log(foodFunc2(food));
+// console.log(foodFunc2b(food));
 
 // Answer IV
 const foodFunc3 = (food = ["candy"]) => {
@@ -85,4 +85,4 @@ let countBits = function (n) {
     .reduce((a, b) => parseInt(a) + parseInt(b), 0);
 };
 
-console.log(countBits('96'));
+console.log(countBits("96"));

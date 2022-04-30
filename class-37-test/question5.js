@@ -25,13 +25,14 @@
             count++
             if (count === 5) {
                 date = element.date
+                console.log(date)
             }
         } else {
             count = 0
         }
     });
     if (count === 5) {
-        return date
+      return date
     }
     return "Helaas pindakaas"
 };
@@ -113,14 +114,14 @@ const testWeatherData = [
   },
 ];
 
-console.assert(
-  possibleSkateDays([]) === "Helaas pindakaas",
-  "empty array failed"
-);
+// console.assert(
+//   possibleSkateDays([]) === "Helaas pindakaas",
+//   "empty array failed"
+// );
 const result = possibleSkateDays(testWeatherData);
-// console.log(result);
-console.assert(
-  result.length === 1,
-  "The result for real data is not 1 element long"
-);
+console.log(result);
+// console.assert(
+//   result.length === 1,
+//   "The result for real data is not 1 element long"
+// );
 // console.assert(result[0] === "2021-02-19", "The sole result is incorrect");

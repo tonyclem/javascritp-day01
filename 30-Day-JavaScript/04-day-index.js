@@ -107,14 +107,13 @@ console.log(totalYears);
 const sortIn = (arr) => {
   return arr.sort((sum, item) => item.passed - sum.passed);
 };
-//   console.log(sortIn(inventors));
+  // console.log(sortIn(inventors));
 const oldest = inventors.sort(function (a, b) {
   const lastInventor = a.passed - a.year;
   const nextInventor = b.passed - b.year;
   return lastInventor > nextInventor ? -1 : 1;
 });
-
-//   console.log(oldest)
+// console.log(oldest);
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
@@ -175,14 +174,14 @@ let sum = (arr) => {
     return a;
   }, {});
 };
-console.log(sum(data));
+// console.log(sum(data));
 
-const transportation = data.reduce(function(obj, item) {
-    if (!obj[item]) {
-      obj[item] = 0;
-    }
-    obj[item]++;
-    return obj;
-  }, {});
+const transportation = data.reduce(function (obj, item) {
+  if (!obj[item]) {
+    obj[item] = 0;
+  }
+  obj[item]++;
+  return obj;
+}, {});
 
-  console.log(transportation);
+// console.log(transportation);

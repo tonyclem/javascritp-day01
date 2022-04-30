@@ -120,7 +120,6 @@ const watchList = [
 ];
 
 // The watchList array holds objects with information on several movies. Use map on watchList to assign a new array of objects to the ratings variable. Each movie in the new array should have only a title key with the name of the film, and a rating key with the IMDB rating. The code in the editor currently uses a for loop to do this, so you should replace the loop functionality with your map expression.
-
 const ratings1 = watchList.map(({ Title: title, imdbRating: rating }) => ({
   title,
   rating,
@@ -187,12 +186,15 @@ Array.prototype.myFilter = function (callback) {
   return newArray;
 };
 
-Array.prototype.myFilter = function (callback) {
+// filter method on a prototype
+// Write your own Array.prototype.myFilter(), which should behave exactly like Array.prototype.filter(). You should not use the built-in filter method. The Array instance can be accessed in the myFilter method using this.
+
+Array.prototype.myFilter3 = function (callback) {
   let newArray = [];
   this.forEach((x) => (callback(x) === true ? newArray.push(x) : null));
   return newArray;
 };
-const new_s2 = s.myFilter((item) => item % 2 === 1);
+const new_s2 = s.myFilter3((item) => item % 2 === 1);
 // console.log(new_s2)
 
 // Slice

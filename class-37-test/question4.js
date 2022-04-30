@@ -26,6 +26,7 @@
 const reorderReviews = (reviews = [], users = []) => {
   // Create a new empty array for verified reviews
   let verifiedUser = [];
+  
   // Create a new empty array for unverified reviews
   let unverifiedUser = [];
   // Create a new empty array to list verified user ids
@@ -38,20 +39,21 @@ const reorderReviews = (reviews = [], users = []) => {
   // PER REVIEW:
   // If the reviewerId property is in the verified users array, add to the verified reviews
   users.forEach((user) =>
-    user.verified
-      ? reviews.forEach((review) =>
-          review.reviewerId === user.id ? verifiedUser.push(review) : null
-        )
-      : null
+  user.verified
+  ? reviews.forEach((review) =>
+  review.reviewerId === user.id ? verifiedUser.push(review) : null
+  )
+  : null
   );
   // Otherwise add the review to the non-verified reviews
   users.forEach((user) =>
-    !user.verified
-      ? reviews.forEach((review) =>
-          review.reviewerId === user.id ? verifiedUser.push(review) : null
-        )
-      : null
+  !user.verified
+  ? reviews.forEach((review) =>
+  review.reviewerId === user.id ? unverifiedUser.push(review) : null
+  )
+  : null
   );
+  console.log(unverifiedUser)
   // return a new array with first the verified reviews and then the non-verified reviews
   return verifiedUser.concat(unverifiedUser);
 };
