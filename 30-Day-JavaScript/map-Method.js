@@ -148,17 +148,39 @@ const filteredList2 = watchList
   .filter((movie) => movie.imdbRating >= 8.0)
   .map((movie) => ({ title: movie["Title"], rating: movie["imdbRating"] }));
 
+// same as above solution
 const filteredList3 = watchList
   .filter(({ imdbRating }) => imdbRating >= 8.0)
   .map(({ Title: title, imdbRating: rating }) => ({ title, rating }));
 
+const getRating = (watchList) => {
+  let averageRating =
+    watchList
+      .filter(
+        (getDirectorByName) =>
+          getDirectorByName.Director === "Christopher Nolan"
+      )
+      .map((convertRating) => Number(convertRating.imdbRating))
+      .reduce((initial, values) => initial + values) /
+    watchList.filter(
+      (getDirectorByName) => getDirectorByName.Director === "Christopher Nolan"
+    ).length;
+  return averageRating;
+};
 
-  const getRating = (watchList) => {
-    let averageRating = watchList.filter(getDirectorByName => getDirectorByName.Director === 'Christopher Nolan').map(convertRating => Number(convertRating.imdbRating)).reduce((initial, values) => initial + values) / watchList.filter(getDirectorByName => getDirectorByName.Director === 'Christopher Nolan').length
-    return averageRating;
-  }
-
-
+// same as get rating
+function getRating2(watchList) {
+  const nolanData = watchList
+    .reduce((data, { Director: director, imdbRating: rating }) => {
+      if (director === 'Christopher Nolan') {
+        data.count++;
+        data.sum += Number(rating);
+      }
+      return data;
+    }, { sum: 0, count: 0 });
+  const averageRating = nolanData.sum / nolanData.count;
+  return averageRating;
+}
 
 
 // Exercise 2

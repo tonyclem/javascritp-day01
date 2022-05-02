@@ -30,3 +30,25 @@ console.log(sortedCompanies);
 // Sorted Ages
 const sortedAges = ages.sort((a, b) => a - b);
 console.log(sortedAges);
+
+// sort 
+function alphabeticalOrder(arr) {
+  arr.sort((a, b) => a === b ? 0 : b < a ? 1 : -1)
+  return arr
+}
+console.log(alphabeticalOrder(["a", "d", "c", "a", "z", "g"]));
+
+// Example
+const globalArray = [5, 6, 3, 2, 9];
+function nonMutatingSort(arr) {
+  let newArr = [...arr]
+  const sortArr = newArr.sort((a, b) => a -b)
+  return sortArr
+}
+nonMutatingSort(globalArray);
+
+function nonMutatingSort2(arr) {
+  return [].concat(arr).sort((a, b) => {
+   return a - b;
+ });
+}
