@@ -17,3 +17,10 @@ const squareList = (arr) => {
 
 const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
 console.log(squaredIntegers); // [25, 9]
+
+// Regular Expressing 
+function sentensify(str) {
+let newStr = str.split(/\W/).join(" ");
+return newStr;
+}
+console.log(sentensify("May-the-force-be-with-you")); // May the force be with you
