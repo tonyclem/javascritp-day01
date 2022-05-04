@@ -18,9 +18,23 @@ const squareList = (arr) => {
 const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
 console.log(squaredIntegers); // [25, 9]
 
-// Regular Expressing 
+// Regular Expressing
 function sentensify(str) {
-let newStr = str.split(/\W/).join(" ");
-return newStr;
+  let newStr = str.split(/\W/).join(" ");
+  return newStr;
 }
 console.log(sentensify("May-the-force-be-with-you")); // May the force be with you
+
+// Example 2
+function urlSlug(title) {
+  return title.toLowerCase().split(/\s+/).join("-");
+}
+console.log(urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone")); // a-mind-needs-books-like-a-sword-needs-a-whetstone
+
+function urlSlug2(title) {
+  return title
+    .split(" ")
+    .filter((substr) => substr !== "")
+    .join("-")
+    .toLowerCase();
+}

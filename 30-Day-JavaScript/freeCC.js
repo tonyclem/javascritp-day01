@@ -126,3 +126,10 @@ function remove2(arr, bookName) {
     return newArr; // Return the new array.
   }
 }
+
+
+// Example Sort
+const globalArray = [5, 6, 3, 2, 9];
+function nonMutatingSort(arr) {  
+  return [].concat(arr).sort((a,b) => a  - b) // The function should return a new array
+}
