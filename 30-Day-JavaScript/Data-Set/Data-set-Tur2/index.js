@@ -7,3 +7,6 @@ myDiv.style.fontSize = "30px";
 myDiv.dataset.name = "John";
 myDiv.dataset.age = "20";
 console.log(myDiv.dataset);
+if (myDiv.dataset.age >= 18) {
+  myDiv.style.backgroundColor = "green";
+}
