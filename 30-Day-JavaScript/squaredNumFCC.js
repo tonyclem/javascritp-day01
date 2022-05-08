@@ -1,6 +1,6 @@
 // The function should return a new array containing the squares of only the positive integers (decimal numbers are not integers) when an array of real numbers is passed to it.
 
-const squareList = (arr) => {
+const squareList1 = (arr) => {
   return arr.reduce((sqrIntegers, num) => {
     return Number.isInteger(num) && num > 0
       ? sqrIntegers.concat(num * num)

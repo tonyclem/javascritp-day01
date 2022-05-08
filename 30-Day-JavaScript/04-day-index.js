@@ -78,8 +78,20 @@ const fifteen = inventors.filter(
 const inventorName = (name) => {
   return name.map((na) => `${na.first} ${na.last}`);
 };
-
 // console.log(inventorName(inventors))
+
+const inventorNames = inventors.map(({ first: firstName, last: lastName }) => ({
+  firstName,
+  lastName,
+}));
+
+const inventorFunc = (name) => {
+  return {
+    firstName: name.first,
+    secondName: name.last,
+  };
+};
+console.log(inventorFunc(inventors));
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
@@ -107,7 +119,7 @@ console.log(totalYears);
 const sortIn = (arr) => {
   return arr.sort((sum, item) => item.passed - sum.passed);
 };
-  // console.log(sortIn(inventors));
+// console.log(sortIn(inventors));
 const oldest = inventors.sort(function (a, b) {
   const lastInventor = a.passed - a.year;
   const nextInventor = b.passed - b.year;

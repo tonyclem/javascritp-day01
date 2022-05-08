@@ -1,0 +1,55 @@
+.animation-div {
+  font-size: 100px;
+  width: 400px;
+  height: 200px;
+  color: red;
+  margin: 20px 0 20px 0;
+  background-color: black;
+}
+
+.hoven {
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.hoven:hover {
+  animation: myAnim 1s ease 0s 0.3 normal forwards;
+}
+
+@keyframes myAnim {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    /* transform-origin: center center; */
+  }
+
+  8% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  /* 45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  } */
+}
+
+/* keyFrames */
+
+.hoven-2 {
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  opacity: 1;
+}
