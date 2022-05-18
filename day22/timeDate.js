@@ -1,16 +1,16 @@
-// const birthday = new Date("1994");
-// const date1 = birthday.getDate();
-// console.log(date1);
+const birthday = new Date("1994");
+const date1 = birthday.getDate();
+console.log(date1);
 
 // const moonLanding = new Date();
 
 // // milliseconds since Jan 1, 1970, 00:00:00.000 GMT
-// console.log(moonLanding.getTime());
+console.log(moonLanding.getTime());
 
-// function getAge(dateString) {
-//   let ageInMilliseconds = new Date() - new Date(dateString);
-//   return Math.floor(ageInMilliseconds / 1000 / 60 / 60 / 24 / 365); // convert to years
-// }
+function getAge(dateString) {
+  let ageInMilliseconds = new Date() - new Date(dateString);
+  return Math.floor(ageInMilliseconds / 1000 / 60 / 60 / 24 / 365); // convert to years
+}
 // console.log(getAge("1994-07-3"));
 
 // let day = new Date();
